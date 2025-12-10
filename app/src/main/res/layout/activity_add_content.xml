@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/loginscreenbg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#0B2A5C"
+        android:layout_marginBottom="24dp" />
+
+    <Spinner
+        android:id="@+id/contentTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logintextip"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/content_types" />
+
+    <EditText
+        android:id="@+id/titleInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textColorHint="#8A8686"
+        android:textColor="#000000"
+        android:background="@drawable/logintextip"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/descInput"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Description"
+        android:textColorHint="#8A8686"
+        android:textColor="#000000"
+        android:background="@drawable/logintextip"
+        android:padding="16dp"
+        android:gravity="top|start"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/selectImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image"
+        android:backgroundTint="#27A5DE"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/black"
+        android:backgroundTint="#0B2A5C" />
+
+</LinearLayout>

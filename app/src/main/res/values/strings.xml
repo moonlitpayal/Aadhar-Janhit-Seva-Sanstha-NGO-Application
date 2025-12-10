@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Aadhar Janhit Seva Sanstha</string>
+        <string-array name="content_types">
+            <item>News</item>
+            <item>Events</item>
+            <item>Stories</item>
+            <item>Gallery</item>
+        </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/loginscreenbg"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="0dp">
+
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/logoforvarun" />
+
+        <TextView
+            android:id="@+id/welcometext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textColor="#0B2A5C"
+            android:textStyle="bold"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <!-- Scrollable Content with Grid Tabs -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/banner1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:autoStart="true"
+                android:flipInterval="3000"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out">
+
+            </ViewFlipper>
+
+            <!-- GridLayout for all tabs -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
+
+                <!-- 10 Grid Tabs - exactly as you provided -->
+                <!-- Donate -->
+                <LinearLayout android:id="@+id/Hdonate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/charity" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Donate" android:textColor="#D62828" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- About Us -->
+                <LinearLayout android:id="@+id/Habout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/group" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About Us" android:textColor="#EF6C2E" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Contact Us -->
+                <LinearLayout android:id="@+id/Hcontact" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/contactuus" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Us" android:textColor="#0B2A5C" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Success Stories -->
+                <LinearLayout android:id="@+id/Hstories" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/storyy" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Success Stories" android:textColor="#117C72" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Events -->
+                <LinearLayout android:id="@+id/Hevents" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/events" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Events" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Volunteer -->
+                <LinearLayout android:id="@+id/Hvolunteer" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/volunteer" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Volunteer" android:textColor="#F4B400" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- News -->
+                <LinearLayout android:id="@+id/Hnews" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/news" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="News" android:textColor="#003049" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Help -->
+                <LinearLayout android:id="@+id/Hhelp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/help" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Help" android:textColor="#0B2A5C" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Profile -->
+                <LinearLayout android:id="@+id/Hprofile" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/profile1" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="#4C3C88" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Gallery -->
+                <LinearLayout android:id="@+id/Hgallery" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@drawable/logintextip" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/image" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gallery" android:textColor="#7B3F98" android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Included -->
+    <include
+        layout="@layout/navigationn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

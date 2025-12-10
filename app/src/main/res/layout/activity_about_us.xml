@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/loginscreenbg"
+    tools:context=".aboutUs">
+
+    <!-- Content Container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="56dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/logoforvarun"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Guest!"
+                    android:textColor="#0B2A5C"
+                    android:textStyle="bold"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <!-- Scrollable Content -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        android:layout_marginBottom="20dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="About Us"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:textColor="#EF6C2E"
+                                android:gravity="center"
+                                android:layout_marginBottom="16dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#1A1A1A"
+                                android:textSize="16sp"
+                                android:lineSpacingExtra="6dp"
+                                android:text="Dear Supporters,\n\nWe are a dedicated non-governmental organization (NGO) driven by a powerful mission to combat the pressing issues of our time — injustice, oppression, crime, corruption, and exploitation. Our foundation rests on the unwavering belief in human rights, equality, and social justice for all.\n\nOur work is focused on uplifting the most vulnerable sections of society. We provide support and care for orphaned and underprivileged children, and extend aid to widows who are often left unseen and unheard. Through our efforts, we aim to build a society where everyone has the opportunity to live with dignity and hope.\n\nWe actively engage in a wide range of initiatives in the social, cultural, arts, and sports domains, recognizing that holistic development goes beyond basic needs. Our programs also promote quality education, accessible medical support, and community empowerment.\n\nThrough compassion, dedication, and collective action, we strive to create a world free from fear and filled with opportunities. Join us in our journey to make a lasting difference." />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="NGO Owner’s Desk - Varun Shah"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="#0B2A5C"
+                                android:layout_marginBottom="12dp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ownerimage"
+                                android:layout_marginBottom="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#1A1A1A"
+                                android:textSize="15sp"
+                                android:lineSpacingExtra="6dp"
+                                android:text="“True power lies not in authority, but in service to others.”\n\nI welcome you to Aadhar Janhit Seva Sanstha, an initiative born from a deep desire to empower the underrepresented and build a just society.\n\nAs a practicing lawyer and founder of three NGOs, I have stood at the crossroads of law, justice, and community service. Through this experience, I realized that real transformation begins not in the courtroom — but in the hearts of people.\n\nDespite being in a position of influence, I believe in humility, approachability, and grassroots connection. I am proud to say that Aadhar Janhit Seva Sanstha is not just an organization — it is a movement toward equality, legal empowerment, healthcare, and educational access for all.\n\nFrom legal aid camps to food drives, awareness campaigns to community development — our mission is rooted in seva (selfless service), and our vision is a Sampoorna Bharat — an inclusive India where every right is protected and every voice heard.\n\nThank you for walking this path with us.\n\nWarm regards,\nAdv. Varun Shah\nFounder – Aadhar Janhit Seva Sanstha\nLawyer | Social Reformer | Community Leader" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:cardBackgroundColor="#FFFFFF">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Developer’s Desk - Payal Mehta"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="#0B2A5C"
+                                android:layout_marginBottom="12dp" />
+
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#1A1A1A"
+                                android:textSize="15sp"
+                                android:lineSpacingExtra="6dp"
+                                android:text="Hello everyone,\n\nI am Payal Mehta, a proud 3rd-year diploma student in Computer Engineering and the developer of this application.\n\nBeing part of this project has been an incredibly humbling and inspiring experience. I deeply admire the majestic dedication and down-to-earth nature of our respected founder, Adv. Varun Shah sir. His commitment to uplifting society and fighting for justice truly inspired me to pour my heart into developing this app.\n\nI am sincerely grateful for this opportunity to contribute to a noble cause through my skills. Sukriya from the bottom of my heart for letting me be a part of this beautiful journey of change and service.\n\nWarm wishes,\nPayal Mehta\nDeveloper | Student | Proud Contributor" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <include
+        layout="@layout/navigationn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

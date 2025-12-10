@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_navigation_bar"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/logintextip"
+    android:padding="8dp"
+    android:gravity="center"
+    android:elevation="8dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:padding="2dp"
+            android:id="@+id/homeid"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ghar"
+            android:tint="@color/nav_icon_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/donationid"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/charity"
+            android:tint="@color/nav_icon_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:padding="3dp"
+            android:id="@+id/storieid"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/storyy"
+            android:tint="@color/nav_icon_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:padding="2dp"
+            android:id="@+id/abouttusid"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/group"
+            android:tint="@color/nav_icon_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/profileid"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/profile1"
+            android:tint="@color/nav_icon_color" />
+    </LinearLayout>
+</LinearLayout>

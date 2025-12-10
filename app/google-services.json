@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "684476850067",
+    "project_id": "payalngo",
+    "storage_bucket": "payalngo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684476850067:android:6144aa874bd1858fccd266",
+        "android_client_info": {
+          "package_name": "com.example.payalngo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-JEDlhAaaj3-Mpwso-KNHZVRAghpTjgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

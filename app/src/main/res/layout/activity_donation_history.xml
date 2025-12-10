@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/loginscreenbg"
+    tools:context=".DonationHistory">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/logoforvarun" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Welcome"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#0B2A5C" />
+    </LinearLayout>
+
+    <!-- Total Donation Text -->
+    <TextView
+        android:id="@+id/TotalDonateH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Donated = ₹ 0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#A8241C"
+        android:gravity="center"
+        android:padding="12dp" />
+
+    <!-- Donation History Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/DonationH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="#FFFFFF"
+            android:layout_margin="8dp"
+            android:elevation="4dp"
+            android:clipToPadding="false">
+            <!-- Items will be added dynamically -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <include
+        layout="@layout/navigationn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
