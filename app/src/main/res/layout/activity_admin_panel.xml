@@ -21,12 +21,12 @@
             android:src="@drawable/logoforvarun"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp"
-            android:contentDescription="Logo" />
+            android:contentDescription="NGO Logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Admin Panel"
+            android:text="Admin Control Center"
             android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#0B2A5C"
@@ -36,13 +36,10 @@
             android:id="@+id/card_about_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="6dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#E3F2FD">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,17 +47,17 @@
                 android:padding="16dp"
                 android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/group"
-                    android:contentDescription="About Icon" />
+                    app:tint="#1976D2" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="About Users"
+                    android:text="User Directory"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#EF6C2E"
+                    android:textColor="#1976D2"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -69,13 +66,10 @@
             android:id="@+id/card_contact_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="6dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#FFEBEE">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,17 +77,47 @@
                 android:padding="16dp"
                 android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/contactuus"
-                    android:contentDescription="Contact Icon" />
+                    app:tint="#D32F2F" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Contact Us Messages"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#A8241C"
+                    android:textColor="#D32F2F"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_verify_donations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#FFF3E0">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/card"
+                    app:tint="#E65100" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify Pending Payments"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#E65100"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -102,13 +126,10 @@
             android:id="@+id/card_donations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="6dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#E8EAF6">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -116,17 +137,17 @@
                 android:padding="16dp"
                 android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/charity"
-                    android:contentDescription="Donation Icon" />
+                    app:tint="#3F51B5" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="All Donations"
+                    android:text="All Donations History"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#0B2A5C"
+                    android:textColor="#3F51B5"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -135,13 +156,10 @@
             android:id="@+id/card_volunteers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="6dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#E8F5E9">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -149,17 +167,17 @@
                 android:padding="16dp"
                 android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/volunteer"
-                    android:contentDescription="Volunteer Icon" />
+                    app:tint="#2E7D32" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Volunteers Request"
+                    android:text="Volunteer Requests"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#388E3C"
+                    android:textColor="#2E7D32"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -168,13 +186,10 @@
             android:id="@+id/card_add_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="6dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#F3E5F5">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -182,16 +197,17 @@
                 android:padding="16dp"
                 android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_contant" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_contant"
+                    app:tint="#7B1FA2" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Add New Content"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#0B2A5C"
+                    android:textColor="#7B1FA2"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -200,13 +216,10 @@
             android:id="@+id/card_delete_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="6dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#FAFAFA">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -214,16 +227,17 @@
                 android:padding="16dp"
                 android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_delete" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_delete"
+                    app:tint="#616161" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Delete Content"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#D62828"
+                    android:textColor="#616161"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -232,13 +246,10 @@
             android:id="@+id/card_add_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="24dp"
+            app:cardElevation="6dp"
             app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#F1F8E9">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -246,31 +257,31 @@
                 android:padding="16dp"
                 android:gravity="center_vertical">
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/image" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/image"
+                    app:tint="#558B2F" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Add New Banner"
+                    android:text="Manage Home Banners"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#0B2A5C"
+                    android:textColor="#558B2F"
                     android:layout_marginStart="16dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
 
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="Logout Admin Session"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:backgroundTint="#D62828"
             android:padding="14dp"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="40dp" />
 
     </LinearLayout>
 </ScrollView>

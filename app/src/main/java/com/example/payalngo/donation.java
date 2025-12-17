@@ -774,7 +774,7 @@ public class donation extends AppCompatActivity {
 
 
 
-package com.example.payalngo;
+/*package com.example.payalngo;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -1032,5 +1032,251 @@ public class donation extends AppCompatActivity {
         aboutus.setColorFilter(ContextCompat.getColor(this, R.color.nav_item_color_default));
         profile.setColorFilter(ContextCompat.getColor(this, R.color.nav_item_color_default));
         selectedIcon.setColorFilter(ContextCompat.getColor(this, R.color.nav_item_color_selected));
+    }
+}*/
+package com.example.payalngo;
+
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
+
+public class donation extends AppCompatActivity {
+
+    private static final int UPI_PAYMENT = 0;
+    private int selectedValue = 100;
+
+    // UI Elements
+    private SeekBar amountSeekbar;
+    private TextView selectedAmountText, upiIdText, welcome;
+    private EditText messageInput, customAmountInput, utrInput;
+    private Button donateButton, donationHBtn, btnPaidManual, btn50, btn100, btn200, btn500;
+
+    // Firebase
+    private FirebaseAuth mAuth;
+    private DatabaseReference databaseReference;
+    private String userName = "Anonymous";
+
+    // Navigation
+    private ImageView home, donationTab, story, aboutus, profile;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_donation);
+
+        // 1. Initialize Firebase
+        mAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference("Donations");
+
+        // 2. Initialize UI Views
+        welcome = findViewById(R.id.welcome);
+        amountSeekbar = findViewById(R.id.amountSeekbar);
+        selectedAmountText = findViewById(R.id.selectedAmountText);
+        upiIdText = findViewById(R.id.upiIdText);
+        messageInput = findViewById(R.id.messageInput);
+        customAmountInput = findViewById(R.id.customAmountInput);
+        utrInput = findViewById(R.id.utrInput);
+        donateButton = findViewById(R.id.donateButton);
+        btnPaidManual = findViewById(R.id.btnPaidManual);
+        donationHBtn = findViewById(R.id.donationHistoryButton);
+
+        btn50 = findViewById(R.id.btn50);
+        btn100 = findViewById(R.id.btn100);
+        btn200 = findViewById(R.id.btn200);
+        btn500 = findViewById(R.id.btn500);
+
+        fetchUserName();
+        setupBottomNavigation();
+
+        // 3. Official UPI Copy Logic
+        upiIdText.setOnClickListener(v -> {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("UPI ID", "332120009429769@cnrb");
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(this, "UPI ID Copied!", Toast.LENGTH_SHORT).show();
+        });
+
+        // 4. Amount Buttons logic
+        btn50.setOnClickListener(v -> updateAmount(50));
+        btn100.setOnClickListener(v -> updateAmount(100));
+        btn200.setOnClickListener(v -> updateAmount(200));
+        btn500.setOnClickListener(v -> updateAmount(500));
+
+        // Seekbar logic
+        amountSeekbar.setMax(1000);
+        amountSeekbar.setProgress(selectedValue);
+        selectedAmountText.setText("₹" + selectedValue);
+        amountSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser) updateAmount(progress);
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
+        // 5. Instant UPI Donate Button
+        donateButton.setOnClickListener(v -> {
+            if (selectedValue <= 0) {
+                Toast.makeText(this, "Please select an amount.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            payUsingUpi();
+        });
+
+        // 6. Manual Payment Submission (Needs Admin Approval)
+        btnPaidManual.setOnClickListener(v -> {
+            String amount = customAmountInput.getText().toString().trim();
+            String utr = utrInput.getText().toString().trim();
+
+            if (amount.isEmpty() || Integer.parseInt(amount) <= 0) {
+                Toast.makeText(this, "Enter the amount you paid", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (utr.isEmpty()) {
+                Toast.makeText(this, "Enter Transaction ID (UTR) for verification", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            saveDonationToFirebase(amount, utr, "Pending Verification");
+        });
+
+        donationHBtn.setOnClickListener(v -> startActivity(new Intent(this, DonationHistory.class)));
+    }
+
+    private void updateAmount(int amount) {
+        selectedValue = amount;
+        amountSeekbar.setProgress(amount);
+        selectedAmountText.setText("₹" + amount);
+        customAmountInput.setText(String.valueOf(amount));
+    }
+
+    private void payUsingUpi() {
+        String amountStr = String.valueOf(selectedValue);
+        String note = messageInput.getText().toString().trim();
+
+        Uri uri = Uri.parse("upi://pay").buildUpon()
+                .appendQueryParameter("pa", "332120009429769@cnrb")
+                .appendQueryParameter("pn", "Aadhar Janhit Seva Sanstha")
+                .appendQueryParameter("tr", "ADHAR" + System.currentTimeMillis())
+                .appendQueryParameter("tn", note.isEmpty() ? "NGO Donation" : note)
+                .appendQueryParameter("am", amountStr)
+                .appendQueryParameter("cu", "INR")
+                .build();
+
+        Intent upiPayIntent = new Intent(Intent.ACTION_VIEW);
+        upiPayIntent.setData(uri);
+        Intent chooser = Intent.createChooser(upiPayIntent, "Pay with");
+
+        if (chooser.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(chooser, UPI_PAYMENT);
+        } else {
+            Toast.makeText(this, "No UPI app found.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == UPI_PAYMENT && data != null) {
+            String response = data.getStringExtra("response");
+            if (response != null && (response.toLowerCase().contains("success") || response.contains("Status=00"))) {
+                saveDonationToFirebase(String.valueOf(selectedValue), "UPI_INST_" + System.currentTimeMillis(), "Completed");
+            } else {
+                Toast.makeText(this, "Payment Failed/Cancelled", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void saveDonationToFirebase(String amountStr, String txnId, String status) {
+        String id = databaseReference.push().getKey();
+        String ts = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
+        String uid = mAuth.getCurrentUser() != null ? mAuth.getCurrentUser().getUid() : "guest";
+
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("userId", uid);
+        data.put("Name", userName);
+        data.put("Amount", Integer.parseInt(amountStr));
+        data.put("TransactionId", txnId);
+        data.put("Message", messageInput.getText().toString().trim());
+        data.put("Date", ts);
+        data.put("Status", status);
+
+        if (id != null) {
+            databaseReference.child(id).setValue(data).addOnSuccessListener(unused -> {
+                showAcknowledgmentDialog(status, amountStr);
+                utrInput.setText("");
+            });
+        }
+    }
+
+    private void showAcknowledgmentDialog(String status, String amount) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        if (status.equals("Completed")) {
+            builder.setTitle("Thank You! ❤️");
+            builder.setMessage("Your donation of ₹" + amount + " has been received successfully.");
+        } else {
+            builder.setTitle("Under Review 🙏");
+            builder.setMessage("Your payment of ₹" + amount + " is submitted. Admin will verify the Transaction ID soon.");
+        }
+        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+        builder.show();
+    }
+
+    private void fetchUserName() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null) {
+            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
+            userRef.child("Full Name").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override public void onDataChange(DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        userName = snapshot.getValue(String.class);
+                        welcome.setText("Welcome, " + userName);
+                    }
+                }
+                @Override public void onCancelled(DatabaseError error) {}
+            });
+        }
+    }
+
+    private void setupBottomNavigation() {
+        home = findViewById(R.id.homeid);
+        donationTab = findViewById(R.id.donationid);
+        story = findViewById(R.id.storieid);
+        aboutus = findViewById(R.id.abouttusid);
+        profile = findViewById(R.id.profileid);
+
+        home.setOnClickListener(v -> startActivity(new Intent(this, HomeActivity.class)));
+        story.setOnClickListener(v -> startActivity(new Intent(this, storie.class)));
+        aboutus.setOnClickListener(v -> startActivity(new Intent(this, aboutUs.class)));
+        profile.setOnClickListener(v -> startActivity(new Intent(this, profile.class)));
+
+        donationTab.setColorFilter(ContextCompat.getColor(this, R.color.nav_item_color_selected));
     }
 }

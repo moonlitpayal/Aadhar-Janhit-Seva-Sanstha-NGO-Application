@@ -146,7 +146,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="NGO Owner’s Desk - Adv. Varun Shah"
+                                android:text="NGO Owner’s Desk - Varun Shah"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
                                 android:textColor="#0B2A5C"
@@ -163,7 +163,7 @@
                                 android:textColor="#1A1A1A"
                                 android:textSize="15sp"
                                 android:lineSpacingExtra="6dp"
-                                android:text="“True power lies not in authority, but in service to others.”\n\nI welcome you to Aadhar Janhit Seva Sanstha, an initiative born from a deep desire to empower the underrepresented and build a just society.\n\nAs a practicing lawyer and founder of three NGOs, I have stood at the crossroads of law, justice, and community service. Through this experience, I realized that real transformation begins not in the courtroom — but in the hearts of people.\n\nDespite being in a position of influence, I believe in humility, approachability, and grassroots connection. I am proud to say that Aadhar Janhit Seva Sanstha is not just an organization — it is a movement toward equality, legal empowerment, healthcare, and educational access for all.\n\nFrom legal aid camps to food drives, awareness campaigns to community development — our mission is rooted in seva (selfless service), and our vision is a Sampoorna Bharat — an inclusive India where every right is protected and every voice heard.\n\nThank you for walking this path with us.\n\nWarm regards,\nAdv. Varun Shah\nFounder – Aadhar Janhit Seva Sanstha\nLawyer | Social Reformer | Community Leader" />
+                                android:text="“True power lies not in authority, but in service to others.”\n\nI welcome you to Aadhar Janhit Seva Sanstha, an initiative born from a deep desire to empower the underrepresented and build a just society.\n\nAs a practicing lawyer and founder of three NGOs, I have stood at the crossroads of law, justice, and community service. Through this experience, I realized that real transformation begins not in the courtroom — but in the hearts of people.\n\nDespite being in a position of influence, I believe in humility, approachability, and grassroots connection. I am proud to say that Aadhar Janhit Seva Sanstha is not just an organization — it is a movement toward equality, legal empowerment, healthcare, and educational access for all.\n\nFrom legal aid camps to food drives, awareness campaigns to community development — our mission is rooted in seva (selfless service), and our vision is a Sampoorna Bharat — an inclusive India where every right is protected and every voice heard.\n\nThank you for walking this path with us.\n\nWarm regards,\nVarun Shah\nFounder – Aadhar Janhit Seva Sanstha\nLawyer | Social Reformer | Community Leader" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -173,6 +173,7 @@
                         app:cardCornerRadius="20dp"
                         app:cardElevation="8dp"
                         app:cardBackgroundColor="#FFFFFF"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp">
                         <LinearLayout
                             android:orientation="vertical"
@@ -193,7 +194,7 @@
                                 android:textColor="#1A1A1A"
                                 android:textSize="15sp"
                                 android:lineSpacingExtra="6dp"
-                                android:text="Hello everyone,\n\nI am Payal Mehta, a proud 3rd-year diploma student in Computer Engineering and the developer of this application.\n\nBeing part of this project has been an incredibly humbling and inspiring experience. I deeply admire the majestic dedication and down-to-earth nature of our respected founder, Adv. Varun Shah sir. His commitment to uplifting society and fighting for justice truly inspired me to pour my heart into developing this app.\n\nI am sincerely grateful for this opportunity to contribute to a noble cause through my skills. Sukriya from the bottom of my heart for letting me be a part of this beautiful journey of change and service.\n\nWarm wishes,\nPayal Mehta\nDeveloper | Student | Proud Contributor" />
+                                android:text="Hello everyone,\n\nI am Payal Mehta, a proud 3rd-year diploma student in Computer Engineering and the developer of this application.\n\nBeing part of this project has been an incredibly humbling and inspiring experience. I deeply admire the majestic dedication and down-to-earth nature of our respected founder, Varun Shah sir. His commitment to uplifting society and fighting for justice truly inspired me to pour my heart into developing this app.\n\nI am sincerely grateful for this opportunity to contribute to a noble cause through my skills. Sukriya from the bottom of my heart for letting me be a part of this beautiful journey of change and service.\n\nWarm wishes,\nPayal Mehta\nDeveloper | Student | Proud Contributor" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
