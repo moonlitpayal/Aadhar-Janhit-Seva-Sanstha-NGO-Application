@@ -50,7 +50,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="Donation Box"
                     android:textColor="#0B2A5C"
@@ -62,8 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
-                    app:cardBackgroundColor="#FFFFFF">
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -72,12 +70,10 @@
                         android:padding="16dp">
 
                         <TextView
-                            android:id="@+id/amountDisplay"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
-                            android:text="Select your Amount to Donate"
+                            android:text="Select Amount to Donate"
                             android:textColor="#1A1A1A"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -86,57 +82,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:layout_marginBottom="8dp"
-                            android:gravity="center"
                             android:orientation="horizontal"
                             android:weightSum="4">
 
-                            <Button
-                                android:id="@+id/btn50"
-                                android:layout_width="0dp"
-                                android:layout_height="40dp"
-                                android:layout_marginEnd="4dp"
-                                android:layout_weight="1"
-                                android:backgroundTint="#EF6C2E"
-                                android:padding="4dp"
-                                android:text="₹50"
-                                android:textColor="#FFFFFF"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btn100"
-                                android:layout_width="0dp"
-                                android:layout_height="40dp"
-                                android:layout_marginEnd="4dp"
-                                android:layout_weight="1"
-                                android:backgroundTint="#EF6C2E"
-                                android:padding="4dp"
-                                android:text="₹100"
-                                android:textColor="#FFFFFF"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btn200"
-                                android:layout_width="0dp"
-                                android:layout_height="40dp"
-                                android:layout_marginEnd="4dp"
-                                android:layout_weight="1"
-                                android:backgroundTint="#EF6C2E"
-                                android:padding="4dp"
-                                android:text="₹200"
-                                android:textColor="#FFFFFF"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btn500"
-                                android:layout_width="0dp"
-                                android:layout_height="40dp"
-                                android:layout_weight="1"
-                                android:backgroundTint="#EF6C2E"
-                                android:padding="4dp"
-                                android:text="₹500"
-                                android:textColor="#FFFFFF"
-                                android:textSize="14sp" />
+                            <Button android:id="@+id/btn50" android:layout_width="0dp" android:layout_height="45dp" android:layout_weight="1" android:text="₹50" android:backgroundTint="#EF6C2E" android:layout_margin="4dp" android:textSize="12sp" android:padding="0dp" android:textColor="#FFFFFF" android:insetTop="0dp" android:insetBottom="0dp"/>
+                            <Button android:id="@+id/btn100" android:layout_width="0dp" android:layout_height="45dp" android:layout_weight="1" android:text="₹100" android:backgroundTint="#EF6C2E" android:layout_margin="4dp" android:textSize="12sp" android:padding="0dp" android:textColor="#FFFFFF" android:insetTop="0dp" android:insetBottom="0dp"/>
+                            <Button android:id="@+id/btn200" android:layout_width="0dp" android:layout_height="45dp" android:layout_weight="1" android:text="₹200" android:backgroundTint="#EF6C2E" android:layout_margin="4dp" android:textSize="12sp" android:padding="0dp" android:textColor="#FFFFFF" android:insetTop="0dp" android:insetBottom="0dp"/>
+                            <Button android:id="@+id/btn500" android:layout_width="0dp" android:layout_height="45dp" android:layout_weight="1" android:text="₹500" android:backgroundTint="#EF6C2E" android:layout_margin="4dp" android:textSize="12sp" android:padding="0dp" android:textColor="#FFFFFF" android:insetTop="0dp" android:insetBottom="0dp"/>
                         </LinearLayout>
 
                         <EditText
@@ -144,31 +96,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/logintextip"
-                            android:hint="Enter a Custom Amount (₹)"
+                            android:hint="Enter Custom Amount (₹)"
                             android:inputType="number"
                             android:padding="12dp"
-                            android:textColor="#1C1C1C"
-                            android:textColorHint="#777777" />
+                            android:background="@drawable/logintextip" />
 
                         <SeekBar
                             android:id="@+id/amountSeekbar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
                             android:layout_marginTop="10dp"
-                            android:layout_marginEnd="30dp"
                             android:max="1000" />
 
                         <TextView
                             android:id="@+id/selectedAmountText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:gravity="center"
                             android:text="₹ 0"
-                            android:textColor="#121212"
-                            android:textSize="18sp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -177,40 +123,73 @@
                     android:id="@+id/messageInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/logintextip"
+                    android:layout_marginTop="16dp"
                     android:hint="Leave a Message (Optional)"
                     android:padding="12dp"
-                    android:textColor="#1C1C1C"
-                    android:textColorHint="#777777" />
+                    android:background="@drawable/logintextip" />
 
-                <Button
-                    android:id="@+id/donateButton"
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:backgroundTint="#D62828"
-                    android:padding="12dp"
-                    android:text="Donate Now"
-                    android:textColor="#FFFFFF" />
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
 
-                <Button
-                    android:id="@+id/donationHistoryButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="#003049"
-                    android:padding="12dp"
-                    android:text="Donation History"
-                    android:textColor="#FFFFFF" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Official Bank Details"
+                            android:textColor="#0B2A5C"
+                            android:textStyle="bold"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bank: Canara Bank"
+                            android:layout_marginTop="4dp" />
+
+                        <ImageView
+                            android:id="@+id/ngoQrImage"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/bankdetails" />
+
+                        <TextView
+                            android:id="@+id/upiIdText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="332120009429769@cnrb"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:background="#F5F5F5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap UPI ID to Copy"
+                            android:textSize="10sp"
+                            android:textColor="#777777" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button android:id="@+id/donateButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Donate Now" android:backgroundTint="#D62828" android:layout_marginTop="20dp" android:textColor="#FFFFFF"/>
+                <Button android:id="@+id/donationHistoryButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Donation History" android:backgroundTint="#003049" android:layout_marginTop="10dp" android:layout_marginBottom="100dp" android:textColor="#FFFFFF"/>
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
-    <include
-        layout="@layout/navigationn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom" />
+    <include layout="@layout/navigationn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

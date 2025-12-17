@@ -10,7 +10,6 @@
     android:background="@drawable/loginscreenbg"
     tools:context=".aboutUs">
 
-    <!-- Content Container -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Header -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,7 +43,6 @@
                     android:textSize="22sp" />
             </LinearLayout>
 
-            <!-- Scrollable Content -->
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -88,10 +85,51 @@
                                 android:textSize="16sp"
                                 android:lineSpacingExtra="6dp"
                                 android:text="Dear Supporters,\n\nWe are a dedicated non-governmental organization (NGO) driven by a powerful mission to combat the pressing issues of our time — injustice, oppression, crime, corruption, and exploitation. Our foundation rests on the unwavering belief in human rights, equality, and social justice for all.\n\nOur work is focused on uplifting the most vulnerable sections of society. We provide support and care for orphaned and underprivileged children, and extend aid to widows who are often left unseen and unheard. Through our efforts, we aim to build a society where everyone has the opportunity to live with dignity and hope.\n\nWe actively engage in a wide range of initiatives in the social, cultural, arts, and sports domains, recognizing that holistic development goes beyond basic needs. Our programs also promote quality education, accessible medical support, and community empowerment.\n\nThrough compassion, dedication, and collective action, we strive to create a world free from fear and filled with opportunities. Join us in our journey to make a lasting difference." />
-
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp"
+                        app:cardBackgroundColor="#FDFDFD"
+                        android:layout_marginBottom="24dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/logintextip">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Spiritual Philosophy &amp; Vision"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="#D62828"
+                                android:gravity="center"
+                                android:layout_marginBottom="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#1A1A1A"
+                                android:textSize="15sp"
+                                android:lineSpacingExtra="8dp"
+                                android:textStyle="italic"
+                                android:text="कभी भी यह न सोचें कि यह संभव नहीं है, लगातार सोचने के बजाय यह सोचें, कि समाधान कैसे खोजा जाए, और दूसरों की मदद से अपने महत्वपूर्ण निस्वार्थ उद्देश्य को पूरा करें, जिससे सामाजिक रूप से सभी का भविष्य उज्ज्वल हो।\n\nढेर सारी खुशियों, ईश्वरीय सहायता और सकारात्मक ऊर्जा, आशीर्वाद से भरा एक खुशहाल जीवन।\n\nसभी को साथ दो, किसी का बुरा मत सोचो, हर किसी की मदद करो, उन्हें संभालो। जितना हम अच्छा करेंगे, सोचेंगे, उतना अपना ही भला है। सभी का मन जीतो, दुनिया तुम्हें जिताएगी।\n\nअच्छा इंसान मिलना मुश्किल है, लेकिन अगर मिल जाए तो तुरंत उसका निस्वार्थ भाव से फायदा उठाना चाहिए। और उसके साथ अपनी जिंदगी बितानी चाहिए।\n\nआजकल कुछ लोग लोगों की बात सुनते-सुनते अपना व्यक्तित्व भी खो देते हैं और फिर जब सोचते हैं तो उनके पास कुछ नहीं बचता। इसलिए पैसों से बढ़कर व्यक्तित्व को तरजीह देनी चाहिए। अगर जिंदगी जीनी है तो निस्वार्थ भाव से सबको साथ लेकर चलना होगा। कृपया अच्छे लोगों को मत खोना, एकजुट रहना, उन्हें पाना मुश्किल है, अगर पा लिया है तो कृपया उन्हें खोने की कोशिश मत करना।\n\nधार्मिक, अध्यात्म, परमार्थ, निस्वार्थ, नियत, दानत और दैविक सहायता से जुड़े हुए बोली भाषायें कभी घूमें पलटे नहीं। जो बोलते हैं वो सच है, होता है, होगा और होगा ही। षडयंत्र, चतुराई और काल भी पीछे हैं। धन, दौलत, शौहरत और भी ये इस काल की बातें चीजें सब एक जैसा हैं, इसीलिए इंसानियत ही अंत तक साथ है उसके आगे कुछ नहीं।\n\nहीरे की परख सिर्फ जौहरी को होती है। आज कल के मौके के लिए कहना चाहूंगा कुछ व्यक्तियों को - किसी ने खोया है, तो किसी ने पाया है पर हीरा तो सदा अपने गुणों से जगमगाया है...\n\nअगर किसी को ज़िंदगी से निकालने की कोशिश करनी है, तो बस एक बार ही करना पड़ता है। अगर आप उसे यहाँ खो देते हैं, तो आप उसे हर जगह खो देते हैं।\n\nवे हाथ हमेशा पवित्र होते हैं, जो प्रार्थना करने के बजाय मदद करने के लिए उठे होते हैं।" />
+
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="2dp"
+                                android:background="#EF6C2E"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="16dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
@@ -100,29 +138,25 @@
                         app:cardElevation="8dp"
                         app:cardBackgroundColor="#FFFFFF"
                         android:layout_marginBottom="20dp">
-
                         <LinearLayout
                             android:orientation="vertical"
                             android:padding="20dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="NGO Owner’s Desk - Varun Shah"
+                                android:text="NGO Owner’s Desk - Adv. Varun Shah"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
                                 android:textColor="#0B2A5C"
                                 android:layout_marginBottom="12dp" />
-
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/ownerimage"
                                 android:layout_marginBottom="12dp" />
-
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -138,14 +172,13 @@
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="8dp"
-                        app:cardBackgroundColor="#FFFFFF">
-
+                        app:cardBackgroundColor="#FFFFFF"
+                        android:layout_marginBottom="20dp">
                         <LinearLayout
                             android:orientation="vertical"
                             android:padding="20dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -154,9 +187,6 @@
                                 android:textStyle="bold"
                                 android:textColor="#0B2A5C"
                                 android:layout_marginBottom="12dp" />
-
-
-
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -166,7 +196,6 @@
                                 android:text="Hello everyone,\n\nI am Payal Mehta, a proud 3rd-year diploma student in Computer Engineering and the developer of this application.\n\nBeing part of this project has been an incredibly humbling and inspiring experience. I deeply admire the majestic dedication and down-to-earth nature of our respected founder, Adv. Varun Shah sir. His commitment to uplifting society and fighting for justice truly inspired me to pour my heart into developing this app.\n\nI am sincerely grateful for this opportunity to contribute to a noble cause through my skills. Sukriya from the bottom of my heart for letting me be a part of this beautiful journey of change and service.\n\nWarm wishes,\nPayal Mehta\nDeveloper | Student | Proud Contributor" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
-
 
                 </LinearLayout>
             </ScrollView>
