@@ -1,4 +1,4 @@
-# 🇮🇳 Aadhar Janhit Seva Sanstha - Official App
+# Aadhar Janhit Seva Sanstha - Official App
 
 > **Voluntarily architected and developed to drive digital transformation for social impact.**
 
