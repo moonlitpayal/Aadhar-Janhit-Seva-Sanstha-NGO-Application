@@ -1,6 +1,6 @@
 # Aadhar Janhit Seva Sanstha - Official App
 
-> **Voluntarily architected and developed to drive digital transformation for social impact.**
+> **Voluntarily architected and developed to drive digital transformation for social impact**
 
 ![Android](https://img.shields.io/badge/Android-Native-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-Language-ED8B00?style=for-the-badge&logo=java&logoColor=white)
